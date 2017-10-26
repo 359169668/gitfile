@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品详情</title>
+		<link rel="stylesheet" type="text/css" href="static/css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="static/css/register.css"/>
+		<link rel="stylesheet" type="text/css" href="static/css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="static/css/detail.css"/>
+		<script	type="text/javascript" src="static/js/jquery-1.12.3.js"></script>
+		<script type="text/javascript" src="static/js/jquery.cookie.js"></script>
+		<script type="text/javascript" src="static/js/jquery.fly.min.js"></script>
+		<script	type="text/javascript" src="static/js/public-jq.js"></script>
+		<script type="text/javascript" src="static/js/detail-jq.js"></script>
+	</head>
+	<body>
+		<div class="top">
+			<div class="top-warp">
+				<div class="top-left">您好，欢迎来到麦包包！ 【 <a href="login.html">登录 </a>| <a href="register.html">注册</a> 】</div>
+				<div class="top-right">
+					<ul>
+						<li class="my-order"><a href="javascript:void(0);">我的订单</a></li>
+						<li class="my-cart" id="my-cart"><a href="cart.html" class="down"><i class="icon icon-l"></i>购物车<em>0</em><b class="arrow"></b></a>
+							<div id="msg">已成功加入购物车！</div>
+							<div class="cart-x" id="cart-x">								
+								<p class="cart-content">您的购物车中还没有商品，先去选购吧！</p>
+								<div id="cart-items">
+									<!--<dl>
+										<dd>
+											<div class="goods-item">
+												<div class="g-pic"><a href="javascript:void(0);"><img src="static/img/detail/01_1.jpg" /></a></div>
+												<div class="g-info">
+													<p class="name"><a href="javascript:void(0);">[mbaobao]刺绣椰树系列 手提单肩斜挎包 </a></p>
+													<p class="num-pos">1</p>
+													<p class="price-pos">￥199</p>
+													<p class="del-pos"><a href="javascript:void(0);" class="del">[删除]</a></p>
+												</div>
+											</div>
+										</dd>
+									</dl>
+									<div class="cart-total">
+										<div class="total-num">
+											<strong class="red">1</strong>件总计：<span class="price">￥<b>199.00</b></span>	
+										</div>
+										<a href="javascript:void(0);" class="go-checkout">去购物车结算</a>
+									</div>-->
+								</div>
+							</div>
+						</li>
+						<li class="site" id="site"><a href="javascript:void(0);" class="down">网站导航<b class="arrow"></b></a>
+							<div class="site-x" id="site-x">
+								<dl>
+									<dt>热门</dt>
+									<dd>
+										<a href="javascript:void(0);" style="color: #d41c4f;">周二上新</a>
+										<a href="javascript:void(0);">爆款推荐</a>
+										<a href="javascript:void(0);">选包中心</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt>购物</dt>
+									<dd>
+										<a href="javascript:void(0);">女包馆</a>
+										<a href="javascript:void(0);">男包馆</a>
+										<a href="javascript:void(0);">运动旅行</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt>服务</dt>
+									<dd>
+										<a href="javascript:void(0);">新手帮助</a>
+										<a href="javascript:void(0);">帮助中心</a>
+										<a href="javascript:void(0);" style="color: #d41c4f;">麦豆说明</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt>服务热线：4006-526-528</dt>
+								</dl>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="header">
+			<div class="header-warp">
+				<div class="logo"><a href="index.html"><img src="static/img/index/logo.png" /></a></div>
+				<div class="search">
+					<div class="search-l">
+						<input type="text" placeholder="搜索‘双肩包’试试~" class="txt"/><input type="button" value="搜索" class="btn"/>
+						<ul>
+							<li><a href="javascript:void(0);" style="padding-left: 0;border-left: none;color: #d41c4f;">潮流双肩包</a></li>
+							<li><a href="javascript:void(0);">甜美韩风</a></li>
+							<li><a href="javascript:void(0);" style="color: #d41c4f;">品质真皮</a></li>
+							<li><a href="javascript:void(0);">绅士公文</a></li>
+							<li><a href="javascript:void(0);" style="border-right: none;">拉杆箱</a></li>
+						</ul>
+					</div>
+					<div class="search-r">
+						<a href="javascript:void(0);"><img src="static/img/index/fuw_03.jpg"/></a>
+						<a href="javascript:void(0);"><img src="static/img/index/fuw_041.jpg"/></a>
+						<a href="javascript:void(0);"><img src="static/img/index/fuw_05.jpg"/></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="nav">
+			<div class="nav-warp">
+				<div class="menu">
+					<div class="menu-m" id="menu-m"><a href="javascript:void(0);">全部商品分类<i class="arrow"></i></a></div>
+					<div class="menu-c" id="menu-c">
+						<div class="cata-group" id="cata-group-1">
+							<dl class="cata-group-btn">
+								<dt style="border-top: 0;"><i class="icon icon-c"></i><a href="javascript:void(0);">潮流女包</a><a href="javascript:void(0);">/真皮女包</a><i class="icon icon-l"></i></dt>
+								<dd>
+									<a href="javascript:void(0);">手提包</a>
+									<a href="javascript:void(0);">单肩包</a>
+									<a href="javascript:void(0);">斜挎包</a>
+									<a href="javascript:void(0);">钱包手包</a>
+									<a href="javascript:void(0);">真皮包</a>
+									<a href="javascript:void(0);">双肩包</a>
+									<a href="javascript:void(0);" style="color: #ca224e;">结婚季</a>
+								</dd>
+								<s></s>
+							</dl>
+							<div class="bag" id="bag">
+								<h5><span>品牌</span><a href="javascript:void(0);">更多女包品牌>></a></h5>
+								<div class="pic">
+									<a href="javascript:void(0);"><img src="static/img/index/mbaobao.jpg"/>mbaobao</a>
+									<a href="javascript:void(0);" style="border-left: 0;"><img src="static/img/index/mplus.jpg"/>M plus</a>
+									<a href="javascript:void(0);" style="border-left: 0;"><img src="static/img/index/lm.jpg"/>浪美</a>
+									<a href="javascript:void(0);" style="border-left: 0;"><img src="static/img/index/af.jpg"/>阿尔法</a>
+									<a href="javascript:void(0);" style="border-left: 0;"><img src="static/img/index/Clous-Krause.jpg"/>Clous-Krause</a>
+								</div>
+								<div class="detail">
+									<dl>
+										<dt><span>热门推荐：</span></dt>
+										<dd>
+											<a href="javascript:void(0);">贝壳包</a>
+											<a href="javascript:void(0);">小方包</a>
+											<a href="javascript:void(0);">链条包</a>
+											<a href="javascript:void(0);">水桶包</a>
+											<a href="javascript:void(0);">托特包</a>
+											<a href="javascript:void(0);">小猪包</a>
+											<a href="javascript:void(0);">格纹包</a>
+											<a href="javascript:void(0);">菱格包</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><span>按价格：</span></dt>
+										<dd>
+											<a href="javascript:void(0);">199以下</a>
+											<a href="javascript:void(0);">200-299</a>
+											<a href="javascript:void(0);">300-599</a>
+											<a href="javascript:void(0);">600-999</a>
+											<a href="javascript:void(0);">1000以上</a>
+										</dd>
+									</dl>		
+									<dl>
+										<dt><span>按主材质：</span></dt>
+										<dd>
+											<a href="javascript:void(0);">真皮</a>
+											<a href="javascript:void(0);">合成革</a>
+											<a href="javascript:void(0);">二层牛皮</a>
+											<a href="javascript:void(0);">羊皮</a>
+											<a href="javascript:void(0);">尼龙</a>
+											<a href="javascript:void(0);">帆布</a>
+										</dd>
+									</dl>
+									<dl style="border-bottom: 0;height: 84px;">
+										<dt><span>按颜色：</span></dt>
+										<dd>
+											<a href="javascript:void(0);">黑色</a>
+											<a href="javascript:void(0);">粉红</a>
+											<a href="javascript:void(0);">杏色</a>
+											<a href="javascript:void(0);">蓝色</a>
+											<a href="javascript:void(0);">白色</a>
+											<a href="javascript:void(0);">红色</a>
+											<a href="javascript:void(0);">橘色</a>
+										</dd>
+									</dl>
+									<dl style="border-bottom: 0;">
+										<dt><span>按尺码：</span></dt>
+										<dd>
+											<a href="javascript:void(0);">迷你包(可放手机)</a>
+											<a href="javascript:void(0);">小包(可放iPad mini)</a>
+											<a href="javascript:void(0);">中包(可放iPad)</a>
+											<a href="javascript:void(0);">大包(可放A4纸)</a>
+											<a href="javascript:void(0);">超大容量</a>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<div class="cata-group" id="cata-group-2">
+							<dl class="cata-group-btn">
+								<dt><i class="icon icon-s"></i><a href="javascript:void(0);">绅士男包</a><i class="icon icon-l"></i></dt>
+								<dd>
+									<a href="javascript:void(0);">真皮包</a>
+									<a href="javascript:void(0);">单肩包</a>
+									<a href="javascript:void(0);">双肩包</a>
+									<a href="javascript:void(0);">手提包</a>
+									<a href="javascript:void(0);">斜挎包</a>
+									<a href="javascript:void(0);">钱包/手包</a>
+									<a href="javascript:void(0);">胸包</a>								
+								</dd>
+								<s></s>
+							</dl>
+							<div class="man" id="man">
+								<h5><span>品牌</span><a href="javascript:void(0);">更多男包品牌>></a></h5>
+								<div class="pic">
+									<a href="javascript:void(0);"><img src="static/img/index/gb2.jpg"/>戈尔本</a>
+								</div>
+								<div class="detail">
+									<dl>
+										<dt><span>热门产品：</span></dt>
+										<dd>
+											<a href="javascript:void(0);">公文包</a>
+											<a href="javascript:void(0);">电脑包</a>
+											<a href="javascript:void(0);">休闲包</a>
+										</dd>
+									</dl>  
+									<dl> 
+										<dt><span>按价格：</span></dt>
+										<dd>
+											<a href="javascript:void(0);">199以下</a>
+											<a href="javascript:void(0);">200-299</a>
+											<a href="javascript:void(0);">300-599</a>
+											<a href="javascript:void(0);">600-999</a>
+											<a href="javascript:void(0);">1000以上</a>
+										</dd>
+									</dl>		
+									<dl>
+										<dt><span>按主材质：</span></dt>
+										<dd>
+											<a href="javascript:void(0);">真皮</a>
+											<a href="javascript:void(0);">合成革</a>
+											<a href="javascript:void(0);">二层牛皮</a>
+											<a href="javascript:void(0);">尼龙</a>
+										</dd>
+									</dl>
+									<dl style="border-bottom: 0;height: 84px;">
+										<dt><span>按颜色：</span></dt>
+										<dd>
+											<a href="javascript:void(0);">黑色</a>
+											<a href="javascript:void(0);">棕色</a>
+											<a href="javascript:void(0);">蓝色</a>
+										</dd>
+									</dl>
+									<dl style="border-bottom: 0;">
+										<dt><span>按尺寸：</span></dt>
+										<dd>
+											<a href="javascript:void(0);">小包(可放iPad mini)</a>
+											<a href="javascript:void(0);">中包(可放iPad)</a>
+											<a href="javascript:void(0);">大包(可放A4纸)</a>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<div class="cata-group" id="cata-group-3">
+							<dl class="cata-group-btn">
+								<dt><i class="icon icon-y"></i><a href="javascript:void(0);">运动/旅行</a><i class="icon icon-l"></i></dt>
+								<dd>
+									<a href="javascript:void(0);">双肩包</a>
+									<a href="javascript:void(0);">拉杆箱</a>
+									<a href="javascript:void(0);">户外功能包</a>
+									<a href="javascript:void(0);">休闲包</a>								
+								</dd>
+								<s></s>
+							</dl>
+							<div class="move" id="move">
+								<h5><span>品牌</span><a href="javascript:void(0);">更多运动包品牌>></a></h5>
+								<div class="pic">
+									<a href="javascript:void(0);"><img src="static/img/index/sp2.jpg"/>希夏邦马</a>
+									<a href="javascript:void(0);" style="border-left: 0;"><img src="static/img/index/delsey.jpg"/>DELSEY</a>
+									<a href="javascript:void(0);" style="border-left: 0;"><img src="static/img/index/ego.jpg"/>Ego Products</a>
+									<a href="javascript:void(0);" style="border-left: 0;"><img src="static/img/index/rimowa.jpg"/>RIMOWA</a>
+									<a href="javascript:void(0);" style="border-left: 0;"><img src="static/img/index/xxl.jpg"/>Samsonite</a>
+									<a href="javascript:void(0);" style="border-left: 0;"><img src="static/img/index/jansport2.jpg"/>JanSport</a>
+								</div>
+								<div class="detail">
+									<dl>
+										<dt><span>热门产品：</span></dt>
+										<dd>
+											<a href="javascript:void(0);">登山包</a>
+											<a href="javascript:void(0);">旅行包</a>
+											<a href="javascript:void(0);">拉杆硬箱</a>
+										</dd>
+									</dl>  
+									<dl style="border-bottom: 0;height: 84px;">
+										<dt><span>按价格：</span></dt>
+										<dd>
+											<a href="javascript:void(0);">199以下</a>
+											<a href="javascript:void(0);">200-299</a>
+											<a href="javascript:void(0);">300-599</a>
+											<a href="javascript:void(0);">600-999</a>
+											<a href="javascript:void(0);">1000以上</a>
+										</dd>
+									</dl>		
+									<dl style="border-bottom: 0;">     
+										<dt><span>按主材质：</span></dt>
+										<dd>
+											<a href="javascript:void(0);">合成革</a>
+											<a href="javascript:void(0);">尼龙</a>
+											<a href="javascript:void(0);">帆布</a>
+											<a href="javascript:void(0);">二层牛皮</a>
+											<a href="javascript:void(0);">真皮</a>
+											<a href="javascript:void(0);">ABS/PC</a>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<div class="cata-group" id="cata-group-4">
+							<dl class="cata-group-btn">
+								<dt><i class="icon icon-q"></i><a href="javascript:void(0);">其他箱包</a><i class="icon icon-l"></i></dt>
+								<dd style="border-bottom: 0;">
+									<a href="javascript:void(0);">妈咪包</a>
+									<a href="javascript:void(0);">儿童包</a>
+									<a href="javascript:void(0);">书包</a>
+									<a href="javascript:void(0);">配件</a>
+								</dd>
+								<s></s>
+							</dl>
+							<div class="other" id="other">
+								<h5><span>品牌</span><a href="javascript:void(0);">其他箱包>></a></h5>
+								<div class="pic">
+									<a href="javascript:void(0);"><img src="static/img/index/littlelife.jpg"/>LITTLELIFE</a>
+									<a href="javascript:void(0);" style="border-left: 0;"><img src="static/img/index/travel-buddies.jpg"/>Travel buddies</a>
+									<a href="javascript:void(0);" style="border-left: 0;"><img src="static/img/index/winghouse.jpg"/>winghouse</a>
+									<a href="javascript:void(0);" style="border-left: 0;"><img src="static/img/index/thomas.jpg"/>托马斯&朋友</a>
+									<a href="javascript:void(0);" style="border-left: 0;"><img src="static/img/index/skiphop.jpg"/>Skip Hop</a>
+									<a href="javascript:void(0);" style="border-left: 0;"><img src="static/img/index/trunki.jpg"/>Trunki</a>
+									<a href="javascript:void(0);" style="border-left: 0;"><img src="static/img/index/tu.jpg"/>TU</a>
+								</div>
+							</div>
+						</div>
+						<a href="javascript:void(0);" class="more">查看更多包包>></a>
+					</div>
+				</div>
+				<div class="nav-n">
+					<ul>
+						<li><a href="index.html" style="border-right: 0;">首页</a></li>
+						<li><a href="javascript:void(0);">新品</a></li>
+						<li><a href="javascript:void(0);">真皮</a></li>
+						<li><a href="javascript:void(0);" style="border-right: 0;">选包</a></li>
+					</ul>
+				</div>
+				<a href="javascript:void(0);" class="phone"><i class=" icon icon-phone"></i>手机版</a>
+			</div>
+		</div>
+		<div class="item-bg">
+			<div class="item-warp">
+				<div class="item-crumbs">
+					<div class="crumb-location">当前位置：<a href="index.html" target="_black">麦包包</a> &gt; [mbaobao]潇洒小姐系列双肩单肩多用包(小款）</div>					
+				</div>
+				<div class="item-detail">
+					<div class="goods-pricure">
+						<div class="pricure-show">
+							<a href="javascript:void(0);" id="goods-zoom">
+								<img src="" width="480" height="480" class="goods-spic-url"/>
+								<div class="cloud-zoom-lens"></div>
+							</a>
+							<div class="mousetrap">
+								<img src="" width="916" height="916"  id="cloud-zoom-big" class="cloud-zoom-big"/>
+							</div>
+							
+						</div>
+						<div class="picture-active">
+							<span class="picture-zoom">鼠标移至图片上可看放大图片</span>
+						</div>
+						<div class="picture-smallpic">
+							<ul class="picture-smallpic-s">
+								<li class="now"><a href="javascript:void(0);" class="pic1"><img src="" width="100%"></a></li>
+								<li><a href="javascript:void(0);" class="pic2"><img src="" width="100%"/></a></li>
+								<li><a href="javascript:void(0);" class="pic3"><img src="" width="100%"/></a></li>
+								<li><a href="javascript:void(0);" class="pic4"><img src="" width="100%"/></a></li>
+								<li><a href="javascript:void(0);" class="pic5"><img src="" width="100%"/></a></li>
+								<li><a href="javascript:void(0);" class="pic6"><img src="" width="100%"></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="goods-detail">
+						<div class="goods-head">
+							<h2 class="goods-name"></h2>						
+						</div>
+						<div class="goods-main">
+							<div class="goods-price-attribute">
+								<div class="goods-mobil">
+									<div class="goods-mobil-pic"><img src="static/img/detail/mobil-pic.jpg"/></div>
+									<span class="goods-mobil-txt">扫码手机购</span>
+								</div>
+								<div class="goods-price-box">
+									<div class="goods-price">
+										<span class="sale-price">优惠价：<b class="yuan"></b></span>
+										<span class="price-num"></span>
+									</div>
+								</div>
+								<div class="goods-status">
+									<s>麦包价：<b class="yuan"></b></s>
+								</div>
+							</div>
+							<div class="goods-state-box">
+								<div class="goods-evaluate">
+									<ul>
+										<li>
+											<p class="sale-status">30天内销售</p>
+											<p class="sale-num">5</p>
+										</li>
+										<li class="sale-border">
+											<p class="sale-status"><a href="javascript:void(0);">所有评论</a></p>
+											<p class="sale-num">0</p>
+											<p class="goods-star"><img src="static/img/detail/icon_star_5.gif"/></p>
+										</li>
+									</ul>
+								</div>
+								<div class="goods-choose">
+									<h4>颜色：</h4>
+									<ul class="goods-choose-list">
+										<li class="choose-now">
+											<a href="javascript:void(0);" class="pic7"><img src="" width="40" height="40"/></a>
+											<i class="now-tick"></i>
+										</li>
+									</ul>
+								</div>
+								<div class="goods-action-btn">
+									<a href="cart.html" class="goods-btn-buy" title="立即购买"></a>
+									<span class="goods-btn-collect addcar"></span>
+								</div>
+								<div class="goods-server-promise">
+									<strong>服务承诺：</strong>
+	                                <span>24小时发货</span>		                                
+	                                <span>10天无条件退换货</span>
+	                                <span>100%正品保证</span>
+	                                <span id="spmyf" style="display: none;">免运费 </span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item-main">
+					<div class="content-hd">
+						<ul class="content-hd-nav" id="item-nav">
+							<li class="status-on"><a href="javascript:void(0);">商品详情</a></li>
+							<li><a href="javascript:void(0);">购买评论</a></li>
+							<li><a href="javascript:void(0);">购物保障</a></li>
+						</ul>
+						<div class="feature-buy">
+							<span class="mini-price">￥<em>219.00</em></span>
+							<a href="cart.html" class="mini-btn-buy">立即购买</a>
+						</div>
+					</div>
+					<div class="content-bd">
+						<div class="feature-item" id="item-goods-property">
+							<div class="info-property">
+                                <div class="mod-info-hd">
+                                    <h4>商品信息</h4>
+                                </div>
+                                <div class="mod-info-bd">
+                                    <ul class="property-list">
+                                        <li>商品编号 : 91325973</li>                                        
+                                        <li>大牌同款 : 其它</li>                                        
+                                        <li>打开方式 : 拉链</li>                                        
+                                        <li>内部结构 : 插袋,内侧拉链袋</li>                                        
+                                        <li>图案 : 卡通</li>                                        
+                                        <li>场合 : 约会,校园,出差,街头,运动,休闲</li>                                        
+                                        <li>大小 : 迷你包</li>                                        
+                                        <li>尺寸 : 其它</li>                                        
+                                        <li>成品产地 : 中国</li>                                        
+                                        <li>材料产地 : 中国</li>                                        
+                                        <li>填充物材质 : 无</li>                                        
+                                        <li>内里材质 : 织物</li>                                        
+                                        <li>材质俗称 : PU</li>                                        
+                                        <li>箱包硬度 : 软箱</li>                                        
+                                        <li>长宽高 : 20*11.5*22CM</li>                                        
+                                        <li>性别 : 女</li>                                        
+                                        <li>款式 : 竖款方形</li>                                        
+                                        <li>使用方式 : 手提斜挎,单肩斜挎,斜挎,手提,单肩</li>                                        
+                                        <li>材质 : 合成革</li>                                        
+                                        <li>流行元素 : 铆钉</li>                                        
+                                        <li>风格 : 日韩风,经典,时尚</li>                                        
+                                        <li>适合季节 : 四季</li>
+                                        <li>开发季节 : 2016秋冬季</li>                                        
+                                        <li>功能属性 : 通勤包</li>                                       
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mod-info-line"></div>
+                            <!--S 商品详情-->
+                            <div class="preview-wrap">                                
+                                <p>
+                                	<img src="static/img/detail/16050009_01.jpg" />
+                                	<img src="static/img/detail/16050009_02.jpg" />
+                                	<img src="static/img/detail/16050009_03.jpg" />
+                                	<img src="static/img/detail/16050009_04.jpg" />
+                                	<img src="static/img/detail/16050009_05.jpg" />
+                                	<img src="static/img/detail/16050009_06.jpg" />
+                                	<img src="static/img/detail/16050009_07.jpg" />
+                                	<img src="static/img/detail/16050009_08.jpg" />
+                                	<img src="static/img/detail/16050009_09.jpg" />
+                                	<img src="static/img/detail/16050009_10.jpg" />
+                                	<img src="static/img/detail/16050009_11.jpg" />
+	                                <img src="static/img/detail/16050009_12.jpg" />
+	                                <img src="static/img/detail/16050009_13.jpg" />
+	                                <img src="static/img/detail/16050009_14.jpg" />
+	                                <img src="static/img/detail/16050009_15.jpg" />
+	                                <img src="static/img/detail/16050009_16.jpg" />
+	                                <img src="static/img/detail/16050009_17.jpg" />
+                                </p>                                
+                            </div>
+						</div>
+						<div class="feature-item active" id="item-goods-comments">							
+							<h4 class="module-bd-top"><span>购买评论</span></h4>
+							<div class="module-bd">
+								<div class="compare-view-box">
+									<ul class="compare-view">
+                                        <li class="centage-praise">
+                                            <span class="s-praise">好评率</span>
+                                            <span class="s-centage">0.00%</span>
+                                        </li>
+                                        <li class="centage-all">
+                                            <div class="centage-b">好评：
+                                                <span class="centage-enough"><span style="width: 100%" class="centage-show"></span></span>
+                                                <span class="centage-num">0.00%</span>
+                                            </div>
+                                            <div class="centage-b">中评：
+                                                <span class="centage-enough"><span style="width: 100%" class="centage-show"></span></span>
+                                                <span class="centage-num">0.00%</span>
+                                            </div>
+                                            <div class="centage-b">差评：
+                                                <span class="centage-enough"><span style="width: 100%" class="centage-show"></span></span>
+                                                <span class="centage-num">0.00%</span>
+                                            </div>
+                                        </li>
+                                        <li class="centage-compare">
+                                            <div class="sort-info">
+                                                <p>质量：<em>0.00%</em>非常好</p>
+                                                <p>款式：<em>0.00%</em>还不错，很实用</p>
+                                                <p>性价比：<em>0.00%</em>高</p>
+                                                <p>色差：<em>0.00%</em>无色差</p>
+                                            </div>
+                                        </li>
+                                   	</ul>
+								</div>
+								<div class="compare-option-box">
+									 <ul class="comment-option-sel">
+                                        <li id="commentall" class="o-over"><a class="comment-type-btn" href="javascript:void(0);" hidefocus="true" data-type="all">全部评论(<em>0</em>)</a><i class="i-arrow"></i></li>
+                                        <li id="commenthp"><a class="comment-type-btn" href="javascript:void(0);" hidefocus="true" data-type="praise">好评(<em>0</em>)</a><i class="i-arrow"></i></li>
+                                        <li id="commentzp"><a class="comment-type-btn" href="javascript:void(0);" hidefocus="true" data-type="neutral">中评(<em>0</em>)</a><i class="i-arrow"></i></li>
+                                        <li id="commentcp"><a class="comment-type-btn" href="javascript:void(0);" hidefocus="true" data-type="poor">差评(<em>0</em>)</a><i class="i-arrow"></i></li>
+                                    </ul>
+                                    <span class="comment-text">以下评论均来自购买的麦友</span>
+								</div>
+								<div class="comment-list"></div>
+								<div class="item-pages">
+									<div class="detail-pages">
+                                        <span>
+                                            <strong id="stNubs">共有0条评论</strong>
+                                        </span>
+                                        <span class="ditail-pages-list">
+                                            <div class="pagination">
+                                                <a href="#item-content" class="next" onclick="javascript:lastOne();">上一页</a>
+                                                <a href="#item-content" class="next" onclick="javascript:nextOne();">下一页</a>
+                                            </div>
+                                        </span>
+                                   </div>
+								</div>
+							</div>
+						</div>
+						<div class="feature-item active" id="item-goods-ensure">
+							<h4 class="module-bd-top"><span>购物保障</span></h4>
+							<div class="module-bd">
+                                <ul class="module-serve">
+                                    <li>
+                                        <img src="static/img/detail/serve_01.png" alt="" width="200" height="52" />
+                                    </li>
+                                    <li>
+                                        <img src="static/img/detail/serve_02.png" alt="" width="200" height="52" />
+                                    </li>
+                                    <li>
+                                        <img src="static/img/detail/serve_03.png" alt="" width="200" height="52" />
+                                    </li>
+                                </ul>
+                                <div class="goods-pics">
+                                    <img src="static/img/detail/afterbuy.jpg"  />                                    
+                                </div>
+                           </div>
+						</div>
+					</div>
+				</div>
+				<div class="subscribe-warp">
+					<div class="subscribe">
+						<div class="sub-w">
+							<div class="code-sub"></div>
+							<div class="follow-us">
+								<h3></h3>
+								<a href="javascript:void(0);" class="f-weixin">
+									<span><img src="static/img/index/weixin.png"/></span>
+								</a>
+								<a href="javascript:void(0);" class="f-weibo-t" title="麦包包腾讯微博"></a>
+								<a href="javascript:void(0);" class="f-weibo" title="麦包包新浪微博"></a>
+							</div>
+						</div>
+						<div class="bottom-ico">
+							<ul>
+								<li><a href="javascript:void(0);" class="ico-1"></a></li>
+								<li><a href="javascript:void(0);" class="ico-2"></a></li>					
+								<li><a href="javascript:void(0);" class="ico-4"></a></li>
+								<li style="border-right: none;"><a href="javascript:void(0);" class="ico-5"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		
+		<div class="footer">
+			<div class="subscribe-warp">
+				<div class="footer-menu">
+					<dl>
+						<dt><a href="javascript:void(0);">关于麦包包</a></dt>
+						<dd>
+							<a href="javascript:void(0);">友情链接</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="javascript:void(0);">新手课堂</a></dt>
+						<dd>
+							<a href="javascript:void(0);">新用户注册</a>
+							<a href="javascript:void(0);">如何购买</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="javascript:void(0);">支付方式</a></dt>
+						<dd>
+							<a href="javascript:void(0);">发票制度</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="javascript:void(0);">配送方式</a></dt>
+						<dd>
+							<a href="javascript:void(0);">配送运费及时效</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="javascript:void(0);">售后服务</a></dt>
+						<dd>
+							<a href="javascript:void(0);">退换货政策及办理</a>
+							<a href="javascript:void(0);">自助退换货</a>
+							<a href="javascript:void(0);">订单跟踪</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="javascript:void(0);">帮助中心</a></dt>
+						<dd>
+							<a href="javascript:void(0);">找回密码</a>
+							<a href="javascript:void(0);">常见问题</a>
+							<a href="javascript:void(0);">意见反馈</a>
+						</dd>
+					</dl>
+					<div class="tel-us">
+						<a href="javascript:void(0);">在线客服</a>
+					</div>
+				</div>
+			</div>
+			<div class="copyright">©2007-2014 Mbaobao All Rights Reserved. 嘉兴市麦包包网络科技有限公司 版权所有，禁止非法复制 经营许可证编号：<a href="javascript:void(0);">经营许可证编号：浙B2-20100425</a></div>
+			<div class="footer-honor">
+				<ul>
+					<li><a href="javascript:void(0);" class="f-link">服务条款</a></li>
+					<li><a href="javascript:void(0);" class="f-link">网站制度</a></li>
+					<li><a href="javascript:void(0);" class="ico-alipay" title="支付宝信任商家"></a></li>
+					<li><a href="javascript:void(0);" class="ico-cuw" title="浙江省信用联盟"></a></li>
+					<li><a href="javascript:void(0);" class="ico-bus"></a></li>
+					<li><a href="javascript:void(0);" class="ico-safe" title="网络消费安全港"></a></li>
+					<li><a href="javascript:void(0);" class="ico-inte" title="诚信经营"></a></li>
+					<li><a href="javascript:void(0);" class="f-link">网站导航</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="fd-side">
+			<ul>
+				<li><a href="javascript:void(0);" class="gotop" id ="gotop"><i></i><span>回到顶部</span></a></li>
+				<li><a href="javascript:void(0);" class="chat"><i></i><span>在线咨询</span></a></li>
+				<li><a href="cart.html" class="gocart"><i></i><span>去购物车</span></a></li>
+				<li><a href="javascript:void(0);" class="qrcode">
+					<div class="qrcode-hover-show"><img src="static/img/index/ewm_02.png"/></div>
+					<i></i><span>二维码</span></a>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

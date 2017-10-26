@@ -1,0 +1,30 @@
+
+[
+	
+	{
+		"id": 101,
+		"img": "static/img/index/1-1704001901.jpg",
+		"name":"轻盈好时髦"
+	}, 
+	{
+		"id": 102,
+		"img": "static/img/index/1-9132562101.jpg",
+		"name":"潮萌机器人"
+	},
+	{
+		"id": 103,
+		"img": "static/img/index/1-1704001601.jpg",
+		"name":"摩登鳄鱼纹"
+	}, 
+	{
+		"id": 104,
+		"img": "static/img/index/1-9132593002.jpg",
+		"name":"酷感星光"
+	},
+	{
+		"id": 105,
+		"img": "static/img/index/1-1706000902.jpg",
+		"name":"职场小心机"
+	}
+	
+]

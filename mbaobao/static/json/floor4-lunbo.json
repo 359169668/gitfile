@@ -1,0 +1,30 @@
+
+[
+	
+	{
+		"id": 101,
+		"img": "static/img/index/3-1411000102.jpg",
+		"name":"天生行动派"
+	}, 
+	{
+		"id": 102,
+		"img": "static/img/index/3-1611008401.jpg",
+		"name":"硬朗精英"
+	},
+	{
+		"id": 103,
+		"img": "static/img/index/952-440-1(1).jpg",
+		"name":"魅力法则"
+	}, 
+	{
+		"id": 104,
+		"img": "static/img/index/3-1604009101.jpg",
+		"name":"帅气轻旅"
+	},
+	{
+		"id": 105,
+		"img": "static/img/index/3-1612004702.jpg",
+		"name":"拒绝中庸"
+	}
+	
+]

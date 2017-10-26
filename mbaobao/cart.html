@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	<title>我的购物车-麦包包</title>
+	<link rel="stylesheet" type="text/css" href="static/css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="static/css/cart.css"/>
+	<script src="static/js/jquery-1.12.3.js"></script>
+	<script src="static/js/jquery.cookie.js"></script>
+	<script src="static/js/cart-jq.js"></script>
+	</head>
+	<body>
+		<div class="cart-top">
+			<div class="cart-warp">
+				<a href="index.html" class="cart-logo"><img src="static/img/index/logo.png"/></a>
+				<div class="cart-title">
+					<h1>购物车</h1>
+					<div class="login-bar">您好，欢迎来到麦包包！</div>
+				</div>
+				<div class="cart-step">
+					<div class="cart-step-icon"></div>
+					<ul>
+						<li><em class="red">1.确认采购商品</em></li>
+						<li>2.填写收货信息</li>
+						<li>3.支付</li>
+						<li>4.支付成功</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="container-bg-warp">
+			<div class="container-warp">
+				<div class="cart-notice">
+					<strong>温馨提示：</strong>
+					<p>加入购物车的商品无法为您保留库存，请及时下单购买，商品价格以订单提交时的价格为准。</p>
+					<i class="arrow-b-l"></i>
+				</div>
+				<div class="cart-main">
+					<div id="js-goods-container">
+						<table class="goods-list">
+							<thead>
+								<tr>
+									<th width="100"></th>
+									<th width="*" style="text-indent: 80px; text-align: left;">商品名称</th>
+									<th width="90">单价</th>
+									<th width="120">数量</th>
+									<th width="110">小计</th>
+									<th width="50">操作</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>						
+						<div class="cart-pick-other">  您还没有挑选商品，赶快行动吧！<a href="index.html">马上去挑选商品>></a></div>
+					</div>
+					<form action="" method="post">
+						<div class="list-footer-info">
+							<div class="sale-pane">
+								<div class="s-p-line">
+									<div class="s-p-title">优惠券/现金券：</div>
+									<div class="s-p-input">
+										<input type="text" class="input-select-coupon"/>
+										<input type="button" value="使用" class="coupon-btn"/>
+									</div>
+									<a href="javascript:void(0);" class="s-p-lower">优惠券/现金券使用规则</a>
+								</div>
+								<div class="s-p-line">
+									<span class="coupon-verify red">请输入正确的优惠券或现金券编码</span>
+								</div>
+								<div id="coupon">
+									<div class="s-p-line">
+										<div class="s-p-title">麦豆：</div>
+										<input type="text" value="0" class="md-input"/>
+										<span class="md-count">X 10 = <strong class="red"><span id="md-count-reslut">0</span> 个麦豆</strong></span>
+										<div class="s-p-lower s-p-lower1">-￥<span id="md_cash">0.00</span></div>
+									</div>
+									<div class="md-tip s-p-line">
+										<div class="md-tip-c">
+											您有麦豆 <strong class="red">0</strong> 个，请输入想使用的麦豆数（10个起用，只可能使用10的整倍数），不使用请填0
+										</div>
+										<span class="arrow-t-l"></span>
+									</div>
+								</div>
+							</div>							
+							<div class="cart-count" id="order-total">
+								<table>
+									<tbody>
+										<tr>
+											<th>商品件数：</th>
+											<td id="countsnub">0件</td>
+										</tr>
+										<tr>
+											<th>商品总金额(不含运费)：</th>
+											<td id="countprices">￥0.00</td>
+										</tr>
+										<tr>
+											<th>麦豆抵扣：</th>
+											<td id="mddk">-￥0.00</td>
+										</tr>
+										<tr>
+											<th>运费：</th>
+											<td id="yfprice">￥0.00</td>
+										</tr>
+										<tr>										
+											<th colspan="2">
+												<div class="frieight-tip">您可以享受免运费服务</div>
+											</th>
+										</tr>
+										<tr>
+											<th colspan="2">
+												<div class="total-price">应付金额：<strong id="zgprice">￥0.00</strong></div>
+											</th>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="bottom-btns">
+								<a href="javascript:void(0);" class="go-checkout"></a>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footer-warp">
+				<div class="special-service">
+					<ul>
+						<li><a href="javascript:void(0);" class="spe-ser-1"></a></li>
+						<li><a href="javascript:void(0);" class="spe-ser-2"></a></li>
+						<li><a href="javascript:void(0);" class="spe-ser-3"></a></li>
+						<li><a href="javascript:void(0);" class="spe-ser-4"></a></li>
+						<li><a href="javascript:void(0);" class="spe-ser-5"></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					©2007-2012 Mbaobao All Rights Reserved. 嘉兴市麦宝科技信息有限公司 版权所有，禁止非法复制 <a href="javascript:void(0);" class="gray">经营许可证编号：浙B2-20100425</a>
+				</div>
+			</div>
+		</div>
+		<div class="fd-side">
+			<ul>
+				<li><a href="javascript:void(0);" class="chat"><i></i><span>在线咨询</span></a></li>
+				<li><a href="cart.html" class="gocart"><i></i><span>去购物车</span></a></li>
+				<li><a href="javascript:void(0);" class="qrcode">
+					<div class="qrcode-hover-show"><img src="static/img/index/ewm_02.png"/></div>
+					<i></i><span>二维码</span></a>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,96 @@
+
+[
+	{	
+		"id": 1001,
+		"name": "[mbaobao]双面料系列 手提单肩斜挎包 ",
+		"price" : "229.00",
+		"mbbPrice":"488.00",
+		"unit": "￥",
+		"headImg": "static/img/list/01-1.jpg",
+		"pic1" : "static/img/list/01-1-1.jpg",
+		"pic2" : "static/img/list/01-2-1.jpg",
+		"pic3" : "" 
+	},
+	{	
+		"id": 1002,
+		"name": "[mbaobao]花朵提手系列 手提包",
+		"price" : "169.00",
+		"mbbPrice":"328.00",
+		"unit": "￥",
+		"headImg": "static/img/list/02-1.jpg",
+		"pic1":"static/img/list/02-1-1.jpg",
+		"pic2":"static/img/list/02-2-1.jpg",
+		"pic3":"static/img/list/02-3-1.jpg" 
+	},
+	{	
+		"id": 1003,
+		"name": "[mbaobao]花朵提手系列 手提单肩斜挎包",
+		"price" : "368.00",
+		"mbbPrice":"368.00",
+		"unit": "￥",
+		"headImg": "static/img/list/03-1.jpg",
+		"pic1":"static/img/list/03-1-1.jpg",
+		"pic2":"static/img/list/03-2-1.jpg",
+		"pic3":"static/img/list/03-3-1.jpg"
+	},
+	{	
+		"id": 1004,
+		"name": "[mbaobao]刺绣椰树系列 手提单肩斜挎包",
+		"price" : "199.00",
+		"mbbPrice":"388.00",
+		"unit": "￥",
+		"headImg": "static/img/list/04-1.jpg",
+		"pic1":"static/img/list/04-1-1.jpg",
+		"pic2":"",
+		"pic3":""
+	},
+	{	
+		"id": 1005,
+		"name": "[mbaobao]刺绣花朵系列 单肩斜挎包",
+		"price" : "189.00",
+		"mbbPrice":"368.00",
+		"unit": "￥",
+		"headImg": "static/img/list/05-1.jpg",
+		"pic1":"static/img/list/05-1-1.jpg",
+		"pic2":"",
+		"pic3":"" 
+	},
+	{	
+		"id": 1006,
+		"name": "[mbaobao]猫脸系列单肩斜挎包",
+		"price" : "179.00",
+		"mbbPrice":"348.00",
+		"unit": "￥",
+		"headImg": "static/img/list/06-2.jpg",
+		"pic1":"static/img/list/06-1-1.jpg",
+		"pic2":"static/img/list/06-2-1.jpg",
+		"pic3":""
+	},
+	{	
+		"id": 1007,
+		"name": "[mbaobao]猫脸系列手提双肩包",
+		"price" : "229.00",
+		"mbbPrice":"448.00",
+		"unit": "￥",
+		"headImg": "static/img/list/07-1.jpg",
+		"pic1":"static/img/list/07-1-1.jpg",
+		"pic2":"",
+		"pic3":""
+	},
+	{	
+		"id": 1008,
+		"name": "[mbaobao]纯色钱夹系列 钱包",
+		"price" : "99.00",
+		"mbbPrice":"188.00",
+		"unit": "￥",
+		"headImg": "static/img/list/08-1.jpg",
+		"pic1":"static/img/list/08-1-1.jpg",
+		"pic2":"static/img/list/08-2-1.jpg",
+		"pic3":"static/img/list/08-3-1.jpg"
+		 
+	}
+]
+
+
+
+

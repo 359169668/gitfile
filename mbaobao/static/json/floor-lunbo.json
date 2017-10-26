@@ -1,0 +1,30 @@
+
+[
+	
+	{
+		"id": 101,
+		"img": "static/img/index/banner06.jpg",
+		"name":"双面佳人"
+	}, 
+	{
+		"id": 102,
+		"img": "static/img/index/banner07.jpg",
+		"name":"趣味emoji"
+	},
+	{
+		"id": 103,
+		"img": "static/img/index/banner08.jpg",
+		"name":"洒脱旅行"
+	}, 
+	{
+		"id": 104,
+		"img": "static/img/index/banner09.jpg",
+		"name":"少女环游记"
+	},
+	{
+		"id": 105,
+		"img": "static/img/index/banner10.jpg",
+		"name":"幸运许愿星"
+	}
+	
+]
